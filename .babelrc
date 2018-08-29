@@ -1,0 +1,36 @@
+{
+  "presets": [
+    "env",
+    "react",
+    "flow",
+    ["es2015", {
+      "modules": false
+    }],
+    "stage-0"
+  ],
+  "compact": "true",
+  "plugins": [
+    "react-hot-loader/babel",
+    "loadable-components/babel",
+    "babel-plugin-styled-components",
+    "material-ui",
+    "lodash"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-react-jsx-source",
+      	"transform-class-properties"
+      ]
+    },
+    "test": {
+      "presets": [
+        "flow",
+        "es2015",
+        "react",
+        "stage-0"
+      ],
+      "plugins": ["transform-runtime", "dynamic-import-node", "syntax-dynamic-import"]
+    }
+  }
+}
